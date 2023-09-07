@@ -27,7 +27,7 @@ client = mqtt.Client()
 client.username_pw_set(login, password)
 
 # SSL encryption
-client.tls_set(ca_certs='certificates/mosquitto.org.crt', certfile=None, keyfile=None, cert_reqs=ssl.CERT_REQUIRED,
+client.tls_set(cert_reqs=ssl.CERT_NONE,
                tls_version=ssl.PROTOCOL_SSLv23, ciphers=None)
 
 # Connecting a client to a broker
